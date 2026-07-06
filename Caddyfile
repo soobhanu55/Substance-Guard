@@ -1,0 +1,7 @@
+{$DOMAIN_APP} {
+	reverse_proxy streamlit:8501
+}
+
+{$DOMAIN_API} {
+	reverse_proxy api:8000
+}

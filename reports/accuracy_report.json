@@ -1,0 +1,429 @@
+{
+  "total_documents": 26,
+  "failed_documents": [],
+  "total_substance_components": 29,
+  "extraction_accuracy": 1.0,
+  "verdict_accuracy": 1.0,
+  "expected_needs_review_count": 11,
+  "correctly_routed_to_review": 11,
+  "review_routing_recall": 1.0,
+  "expected_auto_decided_count": 18,
+  "correctly_auto_decided": 18,
+  "auto_decide_accuracy": 1.0,
+  "by_case": {
+    "clearly_compliant": {
+      "docs": 6,
+      "components": 8,
+      "extraction_correct": 8,
+      "verdict_correct": 8
+    },
+    "clearly_non_compliant": {
+      "docs": 9,
+      "components": 9,
+      "extraction_correct": 9,
+      "verdict_correct": 9
+    },
+    "borderline": {
+      "docs": 6,
+      "components": 6,
+      "extraction_correct": 6,
+      "verdict_correct": 6
+    },
+    "ambiguous_missing_cas": {
+      "docs": 5,
+      "components": 6,
+      "extraction_correct": 6,
+      "verdict_correct": 6
+    }
+  },
+  "results": [
+    {
+      "doc_id": "doc-01",
+      "case": "clearly_compliant",
+      "components": [
+        {
+          "component_name": "Cable Insulation",
+          "expected_substance": "Dibutyl phthalate (DBP)",
+          "extraction_correct": true,
+          "expected_status": "COMPLIANT",
+          "actual_status": "COMPLIANT",
+          "verdict_correct": true
+        },
+        {
+          "component_name": "Connector Solder",
+          "expected_substance": "Lead",
+          "extraction_correct": true,
+          "expected_status": "COMPLIANT",
+          "actual_status": "COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-02",
+      "case": "clearly_compliant",
+      "components": [
+        {
+          "component_name": "Weatherproof Coating",
+          "expected_substance": "Perfluorooctanoic acid (PFOA)",
+          "extraction_correct": true,
+          "expected_status": "COMPLIANT",
+          "actual_status": "COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-03",
+      "case": "clearly_compliant",
+      "components": [
+        {
+          "component_name": "Plastic Blocks",
+          "expected_substance": "Boric acid",
+          "extraction_correct": true,
+          "expected_status": "COMPLIANT",
+          "actual_status": "COMPLIANT",
+          "verdict_correct": true
+        },
+        {
+          "component_name": "Paint Coating",
+          "expected_substance": "Cadmium",
+          "extraction_correct": true,
+          "expected_status": "COMPLIANT",
+          "actual_status": "COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-04",
+      "case": "clearly_compliant",
+      "components": [
+        {
+          "component_name": "DWR Fabric Treatment",
+          "expected_substance": "1H,1H,2H,2H-Perfluorooctane sulfonic acid",
+          "extraction_correct": true,
+          "expected_status": "COMPLIANT",
+          "actual_status": "COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-05",
+      "case": "clearly_compliant",
+      "components": [
+        {
+          "component_name": "Silicone Grip",
+          "expected_substance": "Mercury",
+          "extraction_correct": true,
+          "expected_status": "COMPLIANT",
+          "actual_status": "COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-06",
+      "case": "clearly_compliant",
+      "components": [
+        {
+          "component_name": "Recycled ABS Housing",
+          "expected_substance": "Bis(2-ethylhexyl) phthalate (DEHP)",
+          "extraction_correct": true,
+          "expected_status": "COMPLIANT",
+          "actual_status": "COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-07",
+      "case": "clearly_non_compliant",
+      "components": [
+        {
+          "component_name": "Weatherproof Coating",
+          "expected_substance": "Perfluorooctanoic acid (PFOA)",
+          "extraction_correct": true,
+          "expected_status": "NON_COMPLIANT",
+          "actual_status": "NON_COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-08",
+      "case": "clearly_non_compliant",
+      "components": [
+        {
+          "component_name": "Wire Insulation",
+          "expected_substance": "Dibutyl phthalate (DBP)",
+          "extraction_correct": true,
+          "expected_status": "NON_COMPLIANT",
+          "actual_status": "NON_COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-09",
+      "case": "clearly_non_compliant",
+      "components": [
+        {
+          "component_name": "Yellow Paint Pigment",
+          "expected_substance": "Lead chromate",
+          "extraction_correct": true,
+          "expected_status": "NON_COMPLIANT",
+          "actual_status": "NON_COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-10",
+      "case": "clearly_non_compliant",
+      "components": [
+        {
+          "component_name": "Foam Concentrate",
+          "expected_substance": "Perfluorooctanesulfonic acid (PFOS)",
+          "extraction_correct": true,
+          "expected_status": "NON_COMPLIANT",
+          "actual_status": "NON_COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-11",
+      "case": "clearly_non_compliant",
+      "components": [
+        {
+          "component_name": "Vinyl Plasticizer Layer",
+          "expected_substance": "Bis(2-ethylhexyl) phthalate (DEHP)",
+          "extraction_correct": true,
+          "expected_status": "NON_COMPLIANT",
+          "actual_status": "NON_COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-12",
+      "case": "clearly_non_compliant",
+      "components": [
+        {
+          "component_name": "Harness Solder Joint",
+          "expected_substance": "Cadmium",
+          "extraction_correct": true,
+          "expected_status": "NON_COMPLIANT",
+          "actual_status": "NON_COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-13",
+      "case": "clearly_non_compliant",
+      "components": [
+        {
+          "component_name": "PCB Flame Retardant Layer",
+          "expected_substance": "Decabromodiphenyl ether (DecaBDE)",
+          "extraction_correct": true,
+          "expected_status": "NON_COMPLIANT",
+          "actual_status": "NON_COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-14",
+      "case": "clearly_non_compliant",
+      "components": [
+        {
+          "component_name": "Container Body",
+          "expected_substance": "Bisphenol A",
+          "extraction_correct": true,
+          "expected_status": "NON_COMPLIANT",
+          "actual_status": "NON_COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-15",
+      "case": "clearly_non_compliant",
+      "components": [
+        {
+          "component_name": "Etch Residue Rinse",
+          "expected_substance": "Hexafluoropropylene oxide dimer acid (GenX)",
+          "extraction_correct": true,
+          "expected_status": "NON_COMPLIANT",
+          "actual_status": "NON_COMPLIANT",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-16",
+      "case": "borderline",
+      "components": [
+        {
+          "component_name": "Solder Joint",
+          "expected_substance": "Lead",
+          "extraction_correct": true,
+          "expected_status": "NEEDS_REVIEW",
+          "actual_status": "NEEDS_REVIEW",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-17",
+      "case": "borderline",
+      "components": [
+        {
+          "component_name": "Primer Base",
+          "expected_substance": "Anthracene",
+          "extraction_correct": true,
+          "expected_status": "NEEDS_REVIEW",
+          "actual_status": "NEEDS_REVIEW",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-18",
+      "case": "borderline",
+      "components": [
+        {
+          "component_name": "Surface Treatment",
+          "expected_substance": "Perfluorooctanoic acid (PFOA)",
+          "extraction_correct": true,
+          "expected_status": "NEEDS_REVIEW",
+          "actual_status": "NEEDS_REVIEW",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-19",
+      "case": "borderline",
+      "components": [
+        {
+          "component_name": "Pellet Compound",
+          "expected_substance": "Butyl benzyl phthalate (BBP)",
+          "extraction_correct": true,
+          "expected_status": "NEEDS_REVIEW",
+          "actual_status": "NEEDS_REVIEW",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-20",
+      "case": "borderline",
+      "components": [
+        {
+          "component_name": "Glaze Pigment",
+          "expected_substance": "Cadmium",
+          "extraction_correct": true,
+          "expected_status": "NEEDS_REVIEW",
+          "actual_status": "NEEDS_REVIEW",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-21",
+      "case": "borderline",
+      "components": [
+        {
+          "component_name": "Softener Base",
+          "expected_substance": "Perfluorohexanesulfonic acid",
+          "extraction_correct": true,
+          "expected_status": "NEEDS_REVIEW",
+          "actual_status": "NEEDS_REVIEW",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-22",
+      "case": "ambiguous_missing_cas",
+      "components": [
+        {
+          "component_name": "Additive Package",
+          "expected_substance": "FluoroMagic XR-9 (proprietary blend)",
+          "extraction_correct": true,
+          "expected_status": "NEEDS_REVIEW",
+          "actual_status": "NEEDS_REVIEW",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-23",
+      "case": "ambiguous_missing_cas",
+      "components": [
+        {
+          "component_name": "Metal Finish",
+          "expected_substance": "Chromate",
+          "extraction_correct": true,
+          "expected_status": "NEEDS_REVIEW",
+          "actual_status": "NEEDS_REVIEW",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-24",
+      "case": "ambiguous_missing_cas",
+      "components": [
+        {
+          "component_name": "Cord Sheathing",
+          "expected_substance": "Leed (handwritten, likely Lead)",
+          "extraction_correct": true,
+          "expected_status": "NEEDS_REVIEW",
+          "actual_status": "NEEDS_REVIEW",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-25",
+      "case": "ambiguous_missing_cas",
+      "components": [
+        {
+          "component_name": "Polymer Topcoat",
+          "expected_substance": "Next-Gen Non-Fluorinated Repellent Polymer NF-88",
+          "extraction_correct": true,
+          "expected_status": "NEEDS_REVIEW",
+          "actual_status": "NEEDS_REVIEW",
+          "verdict_correct": true
+        }
+      ]
+    },
+    {
+      "doc_id": "doc-26",
+      "case": "ambiguous_missing_cas",
+      "components": [
+        {
+          "component_name": "Housing",
+          "expected_substance": "Lead",
+          "extraction_correct": true,
+          "expected_status": "COMPLIANT",
+          "actual_status": "COMPLIANT",
+          "verdict_correct": true
+        },
+        {
+          "component_name": "Coating Layer",
+          "expected_substance": "Unidentified Fluorosurfactant Blend",
+          "extraction_correct": true,
+          "expected_status": "NEEDS_REVIEW",
+          "actual_status": "NEEDS_REVIEW",
+          "verdict_correct": true
+        }
+      ]
+    }
+  ]
+}

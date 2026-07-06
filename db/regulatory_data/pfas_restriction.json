@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "source": "US EPA PFAS Analyte List (Appendix B of Part II, epa.gov/system/files/documents/2024-05/pfas-analyte-list.pdf) used as a real, citable, CAS-verified enumeration of named PFAS -- ECHA's own REACH Annex XVII PFAS restriction dossier does not publish an enumerated CAS list, since it defines PFAS structurally (any substance containing at least one fully fluorinated methyl or methylene carbon atom). The ~14,000-substance figure quoted in ECHA's impact assessment is an estimate under that structural definition, not a downloadable list -- so this file is a real, verified, named-substance subset (40 entries) rather than a fabricated attempt at the full structural universe. `pfas_structural_flag` is true for every entry, and is also the field the Neo4j multi-hop query uses to catch PFAS substances that are NOT in this named list but match the structural definition (set at ingestion time by a simple heuristic: CAS/name contains 'perfluoro', 'polyfluoro', or a fluorotelomer/FTOH/FTS naming pattern).",
+    "regulation_status": {
+      "name": "PFAS_RESTRICTION_DRAFT",
+      "legal_ref": "Draft amendment to REACH Annex XVII (Regulation (EC) No 1907/2006), restriction dossier submitted by five Member State authorities (Germany, Netherlands, Denmark, Sweden, Norway) plus ECHA",
+      "timeline": [
+        {"date": "2023-01-13", "event": "Restriction proposal submitted; first public consultation opened (closed 2023-09-25, ~5,600 comments)"},
+        {"date": "2025-08-20", "event": "Updated PFAS Background Document published, narrowing scope and revising thresholds"},
+        {"date": "2026-03-03", "event": "ECHA Risk Assessment Committee (RAC) adopted its opinion"},
+        {"date": "2026-03-11", "event": "ECHA Socio-Economic Analysis Committee (SEAC) agreed its draft opinion"},
+        {"date": "2026-03-26", "event": "Second public consultation opened on SEAC's draft opinion (closed 2026-05-25)"},
+        {"date": "2026-end (expected)", "event": "SEAC expected to adopt its final opinion"},
+        {"date": "2027+ (earliest)", "event": "European Commission drafts formal restriction decision with Member States for a REACH Committee vote; a final Annex XVII entry is not expected before 2027"}
+      ],
+      "status_as_of": "2026-07-05: in 2nd public consultation / committee-opinion stage, not yet a final legal restriction -- screening against it is a forward-looking readiness check, not an enforcement of current law."
+    },
+    "proposed_thresholds": [
+      {"basis": "individual_pfas", "value_ppb": 25, "method": "targeted analysis; polymeric PFAS excluded from quantification"},
+      {"basis": "total_pfas_targeted", "value_ppb": 250, "method": "targeted analysis, sum of quantifiable PFAS; pre-degradation of precursors optional; polymeric PFAS excluded"},
+      {"basis": "total_pfas_incl_polymeric", "value_ppm": 50, "method": "total fluorine / total PFAS content including polymeric PFAS; total-fluorine screening trigger at 50 mg F/kg requires the manufacturer/importer to show the fluorine is not PFAS-derived"}
+    ],
+    "derogation_pathways": [
+      {"code": "RO1", "description": "Full ban with an 18-month transition period"},
+      {"code": "RO2", "description": "Time-limited use-specific exemptions, 5-12 years depending on sector viability and availability of alternatives"}
+    ]
+  },
+  "substances": [
+    {"cas_number": "375-22-4", "name": "Perfluorobutanoic acid", "abbreviation": "PFBA", "subclass": "PFCA"},
+    {"cas_number": "2706-90-3", "name": "Perfluoropentanoic acid", "abbreviation": "PFPeA", "subclass": "PFCA"},
+    {"cas_number": "307-24-4", "name": "Perfluorohexanoic acid", "abbreviation": "PFHxA", "subclass": "PFCA"},
+    {"cas_number": "375-85-9", "name": "Perfluoroheptanoic acid", "abbreviation": "PFHpA", "subclass": "PFCA"},
+    {"cas_number": "335-67-1", "name": "Perfluorooctanoic acid", "abbreviation": "PFOA", "subclass": "PFCA"},
+    {"cas_number": "375-95-1", "name": "Perfluorononanoic acid", "abbreviation": "PFNA", "subclass": "PFCA"},
+    {"cas_number": "335-76-2", "name": "Perfluorodecanoic acid", "abbreviation": "PFDA", "subclass": "PFCA"},
+    {"cas_number": "2058-94-8", "name": "Perfluoroundecanoic acid", "abbreviation": "PFUnA", "subclass": "PFCA"},
+    {"cas_number": "307-55-1", "name": "Perfluorododecanoic acid", "abbreviation": "PFDoA", "subclass": "PFCA"},
+    {"cas_number": "72629-94-8", "name": "Perfluorotridecanoic acid", "abbreviation": "PFTrDA", "subclass": "PFCA"},
+    {"cas_number": "376-06-7", "name": "Perfluorotetradecanoic acid", "abbreviation": "PFTeDA", "subclass": "PFCA"},
+    {"cas_number": "375-73-5", "name": "Perfluorobutanesulfonic acid", "abbreviation": "PFBS", "subclass": "PFSA"},
+    {"cas_number": "2706-91-4", "name": "Perfluoropentanesulfonic acid", "abbreviation": "PFPeS", "subclass": "PFSA"},
+    {"cas_number": "355-46-4", "name": "Perfluorohexanesulfonic acid", "abbreviation": "PFHxS", "subclass": "PFSA"},
+    {"cas_number": "375-92-8", "name": "Perfluoroheptanesulfonic acid", "abbreviation": "PFHpS", "subclass": "PFSA"},
+    {"cas_number": "1763-23-1", "name": "Perfluorooctanesulfonic acid", "abbreviation": "PFOS", "subclass": "PFSA"},
+    {"cas_number": "68259-12-1", "name": "Perfluorononanesulfonic acid", "abbreviation": "PFNS", "subclass": "PFSA"},
+    {"cas_number": "335-77-3", "name": "Perfluorodecanesulfonic acid", "abbreviation": "PFDS", "subclass": "PFSA"},
+    {"cas_number": "79780-39-5", "name": "Perfluorododecanesulfonic acid", "abbreviation": "PFDoS", "subclass": "PFSA"},
+    {"cas_number": "757124-72-4", "name": "1H,1H,2H,2H-Perfluorohexane sulfonic acid", "abbreviation": "4:2FTS", "subclass": "fluorotelomer_sulfonic_acid"},
+    {"cas_number": "27619-97-2", "name": "1H,1H,2H,2H-Perfluorooctane sulfonic acid", "abbreviation": "6:2FTS", "subclass": "fluorotelomer_sulfonic_acid"},
+    {"cas_number": "39108-34-4", "name": "1H,1H,2H,2H-Perfluorodecane sulfonic acid", "abbreviation": "8:2FTS", "subclass": "fluorotelomer_sulfonic_acid"},
+    {"cas_number": "754-91-6", "name": "Perfluorooctanesulfonamide", "abbreviation": "PFOSA", "subclass": "sulfonamide"},
+    {"cas_number": "31506-32-8", "name": "N-methyl perfluorooctanesulfonamide", "abbreviation": "NMeFOSA", "subclass": "sulfonamide"},
+    {"cas_number": "4151-50-2", "name": "N-ethyl perfluorooctanesulfonamide", "abbreviation": "NEtFOSA", "subclass": "sulfonamide"},
+    {"cas_number": "2355-31-9", "name": "N-methyl perfluorooctanesulfonamidoacetic acid", "abbreviation": "NMeFOSAA", "subclass": "sulfonamidoacetic_acid"},
+    {"cas_number": "2991-50-6", "name": "N-ethyl perfluorooctanesulfonamidoacetic acid", "abbreviation": "NEtFOSAA", "subclass": "sulfonamidoacetic_acid"},
+    {"cas_number": "24448-09-7", "name": "N-methyl perfluorooctanesulfonamidoethanol", "abbreviation": "NMeFOSE", "subclass": "sulfonamide_ethanol"},
+    {"cas_number": "1691-99-2", "name": "N-ethyl perfluorooctanesulfonamidoethanol", "abbreviation": "NEtFOSE", "subclass": "sulfonamide_ethanol"},
+    {"cas_number": "13252-13-6", "name": "Hexafluoropropylene oxide dimer acid (GenX)", "abbreviation": "HFPO-DA", "subclass": "perfluoroether_carboxylic_acid"},
+    {"cas_number": "919005-14-4", "name": "4,8-Dioxa-3H-perfluorononanoic acid", "abbreviation": "ADONA", "subclass": "perfluoroether_carboxylic_acid"},
+    {"cas_number": "377-73-1", "name": "Perfluoro-3-methoxypropanoic acid", "abbreviation": "PFMPA", "subclass": "perfluoroether_carboxylic_acid"},
+    {"cas_number": "863090-89-5", "name": "Perfluoro-4-methoxybutanoic acid", "abbreviation": "PFMBA", "subclass": "perfluoroether_carboxylic_acid"},
+    {"cas_number": "151772-58-6", "name": "Nonafluoro-3,6-dioxaheptanoic acid", "abbreviation": "NFDHA", "subclass": "perfluoroether_carboxylic_acid"},
+    {"cas_number": "756426-58-1", "name": "9-Chlorohexadecafluoro-3-oxanonane-1-sulfonic acid", "abbreviation": "9Cl-PF3ONS", "subclass": "ether_sulfonic_acid"},
+    {"cas_number": "763051-92-9", "name": "11-Chloroeicosafluoro-3-oxaundecane-1-sulfonic acid", "abbreviation": "11Cl-PF3OUdS", "subclass": "ether_sulfonic_acid"},
+    {"cas_number": "113507-82-7", "name": "Perfluoro(2-ethoxyethane)sulfonic acid", "abbreviation": "PFEESA", "subclass": "ether_sulfonic_acid"},
+    {"cas_number": "356-02-5", "name": "3-Perfluoropropyl propanoic acid", "abbreviation": "3:3FTCA", "subclass": "fluorotelomer_carboxylic_acid"},
+    {"cas_number": "914637-49-3", "name": "2H,2H,3H,3H-Perfluorooctanoic acid", "abbreviation": "5:3FTCA", "subclass": "fluorotelomer_carboxylic_acid"},
+    {"cas_number": "812-70-4", "name": "3-Perfluoroheptyl propanoic acid", "abbreviation": "7:3FTCA", "subclass": "fluorotelomer_carboxylic_acid"}
+  ]
+}

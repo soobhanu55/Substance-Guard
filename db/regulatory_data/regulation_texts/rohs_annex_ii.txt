@@ -1,0 +1,22 @@
+Directive 2011/65/EU (RoHS 2) -- Restriction of Hazardous Substances in Electrical and Electronic Equipment
+
+Article 4 (Prevention)
+1. Member States shall ensure that electrical and electronic equipment (EEE) placed on the market, including cables and spare parts for its repair, its reuse, updating of its functionalities or upgrading of its capacity, does not contain the substances listed in Annex II.
+2. Paragraph 1 shall apply to homogeneous materials: no more than the maximum concentration value by weight specified in Annex II shall be tolerated in any homogeneous material of the EEE.
+
+Annex II (Substances referred to in Article 4(1) and their maximum concentration values by weight in homogeneous materials)
+As amended by Commission Delegated Directive (EU) 2015/863, which added four phthalates with effect from 22 July 2019 (2021 for medical devices and monitoring/control instruments):
+1. Lead (Pb) -- 0.1%
+2. Mercury (Hg) -- 0.1%
+3. Cadmium (Cd) -- 0.01%
+4. Hexavalent chromium (Cr(VI)) -- 0.1%
+5. Polybrominated biphenyls (PBB) -- 0.1%
+6. Polybrominated diphenyl ethers (PBDE) -- 0.1%
+7. Bis(2-ethylhexyl) phthalate (DEHP) -- 0.1% (added by 2015/863)
+8. Butyl benzyl phthalate (BBP) -- 0.1% (added by 2015/863)
+9. Dibutyl phthalate (DBP) -- 0.1% (added by 2015/863)
+10. Diisobutyl phthalate (DIBP) -- 0.1% (added by 2015/863)
+
+A "homogeneous material" is a material that cannot be mechanically disjointed into different materials -- e.g. a single plastic housing, a single solder joint, a single wire insulation layer. This is why a component-level concentration reading is not sufficient on its own: a component that is 0.05% Pb overall could still contain a homogeneous sub-part (e.g. a solder joint) at well above 0.1% Pb, and RoHS applies at the homogeneous-material level, not the whole-component level. Screening results in this system report at the extracted-component granularity given in the supplier SDS/test report; where a test report already reports per-homogeneous-material concentrations (the normal practice for RoHS test reports), that is the correct level to compare against these thresholds directly.
+
+Annex III and Annex IV list time-limited exemptions (e.g. lead in certain solders, mercury in certain lamps) that permit use above these thresholds for specific, named applications; a substance found above threshold is only a confirmed RoHS non-compliance if no applicable Annex III/IV exemption covers that specific use -- this system flags such cases as NEEDS_REVIEW rather than an automatic NON_COMPLIANT, since exemption applicability requires the specific EEE category and use to be checked by a human reviewer.

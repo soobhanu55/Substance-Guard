@@ -1,0 +1,445 @@
+{
+  "doc-01": {
+    "product_name": "Standard USB Charging Cable",
+    "manufacturer": "Voltera Ltd",
+    "case": "clearly_compliant",
+    "components": [
+      {
+        "component_name": "Cable Insulation",
+        "substance_name": "Dibutyl phthalate (DBP)",
+        "cas_number": "84-74-2",
+        "concentration": 0.02,
+        "unit": "pct",
+        "expected_status": "COMPLIANT",
+        "expected_reason_code": "within_threshold"
+      },
+      {
+        "component_name": "Connector Solder",
+        "substance_name": "Lead",
+        "cas_number": "7439-92-1",
+        "concentration": 0.03,
+        "unit": "pct",
+        "expected_status": "COMPLIANT",
+        "expected_reason_code": "within_threshold"
+      }
+    ]
+  },
+  "doc-02": {
+    "product_name": "Outdoor Sensor Enclosure",
+    "manufacturer": "Sensatek Inc",
+    "case": "clearly_compliant",
+    "components": [
+      {
+        "component_name": "Weatherproof Coating",
+        "substance_name": "Perfluorooctanoic acid (PFOA)",
+        "cas_number": "335-67-1",
+        "concentration": 18,
+        "unit": "ppb",
+        "expected_status": "COMPLIANT",
+        "expected_reason_code": "within_threshold"
+      }
+    ]
+  },
+  "doc-03": {
+    "product_name": "Children's Building Block Set",
+    "manufacturer": "PlayCorp",
+    "case": "clearly_compliant",
+    "components": [
+      {
+        "component_name": "Plastic Blocks",
+        "substance_name": "Boric acid",
+        "cas_number": "10043-35-3",
+        "concentration": 0.01,
+        "unit": "pct",
+        "expected_status": "COMPLIANT",
+        "expected_reason_code": "within_threshold"
+      },
+      {
+        "component_name": "Paint Coating",
+        "substance_name": "Cadmium",
+        "cas_number": "7440-43-9",
+        "concentration": 0.002,
+        "unit": "pct",
+        "expected_status": "COMPLIANT",
+        "expected_reason_code": "within_threshold"
+      }
+    ]
+  },
+  "doc-04": {
+    "product_name": "Textile Water-Repellent Jacket",
+    "manufacturer": "AlpineWear",
+    "case": "clearly_compliant",
+    "components": [
+      {
+        "component_name": "DWR Fabric Treatment",
+        "substance_name": "1H,1H,2H,2H-Perfluorooctane sulfonic acid",
+        "cas_number": "27619-97-2",
+        "concentration": 5,
+        "unit": "ppb",
+        "expected_status": "COMPLIANT",
+        "expected_reason_code": "within_threshold"
+      }
+    ]
+  },
+  "doc-05": {
+    "product_name": "Kitchen Utensil Handle",
+    "manufacturer": "HomeGoods Co",
+    "case": "clearly_compliant",
+    "components": [
+      {
+        "component_name": "Silicone Grip",
+        "substance_name": "Mercury",
+        "cas_number": "7439-97-6",
+        "concentration": 0.001,
+        "unit": "pct",
+        "expected_status": "COMPLIANT",
+        "expected_reason_code": "within_threshold"
+      }
+    ]
+  },
+  "doc-06": {
+    "product_name": "Laptop Bottom Case",
+    "manufacturer": "Compucase Ltd",
+    "case": "clearly_compliant",
+    "components": [
+      {
+        "component_name": "Recycled ABS Housing",
+        "substance_name": "Bis(2-ethylhexyl) phthalate (DEHP)",
+        "cas_number": "117-81-7",
+        "concentration": 0.015,
+        "unit": "pct",
+        "expected_status": "COMPLIANT",
+        "expected_reason_code": "within_threshold"
+      }
+    ]
+  },
+  "doc-07": {
+    "product_name": "Industrial Metal Coating Spray",
+    "manufacturer": "Acme Coatings Inc",
+    "case": "clearly_non_compliant",
+    "components": [
+      {
+        "component_name": "Weatherproof Coating",
+        "substance_name": "Perfluorooctanoic acid (PFOA)",
+        "cas_number": "335-67-1",
+        "concentration": 500,
+        "unit": "ppb",
+        "expected_status": "NON_COMPLIANT",
+        "expected_reason_code": "exceeds_threshold"
+      }
+    ]
+  },
+  "doc-08": {
+    "product_name": "Consumer Electronics Cable Set",
+    "manufacturer": "Voltera Ltd",
+    "case": "clearly_non_compliant",
+    "components": [
+      {
+        "component_name": "Wire Insulation",
+        "substance_name": "Dibutyl phthalate (DBP)",
+        "cas_number": "84-74-2",
+        "concentration": 0.45,
+        "unit": "pct",
+        "expected_status": "NON_COMPLIANT",
+        "expected_reason_code": "exceeds_threshold"
+      }
+    ]
+  },
+  "doc-09": {
+    "product_name": "Toy Figurine Paint Set",
+    "manufacturer": "PlayCorp",
+    "case": "clearly_non_compliant",
+    "components": [
+      {
+        "component_name": "Yellow Paint Pigment",
+        "substance_name": "Lead chromate",
+        "cas_number": "7758-97-6",
+        "concentration": 3.2,
+        "unit": "pct",
+        "expected_status": "NON_COMPLIANT",
+        "expected_reason_code": "exceeds_threshold"
+      }
+    ]
+  },
+  "doc-10": {
+    "product_name": "Firefighting Foam Concentrate",
+    "manufacturer": "GuardFoam Systems",
+    "case": "clearly_non_compliant",
+    "components": [
+      {
+        "component_name": "Foam Concentrate",
+        "substance_name": "Perfluorooctanesulfonic acid (PFOS)",
+        "cas_number": "1763-23-1",
+        "concentration": 1200,
+        "unit": "ppb",
+        "expected_status": "NON_COMPLIANT",
+        "expected_reason_code": "exceeds_threshold"
+      }
+    ]
+  },
+  "doc-11": {
+    "product_name": "Vinyl Flooring Tile",
+    "manufacturer": "FloorTech Industries",
+    "case": "clearly_non_compliant",
+    "components": [
+      {
+        "component_name": "Vinyl Plasticizer Layer",
+        "substance_name": "Bis(2-ethylhexyl) phthalate (DEHP)",
+        "cas_number": "117-81-7",
+        "concentration": 1.1,
+        "unit": "pct",
+        "expected_status": "NON_COMPLIANT",
+        "expected_reason_code": "exceeds_threshold"
+      }
+    ]
+  },
+  "doc-12": {
+    "product_name": "Automotive Wiring Harness",
+    "manufacturer": "AutoWire GmbH",
+    "case": "clearly_non_compliant",
+    "components": [
+      {
+        "component_name": "Harness Solder Joint",
+        "substance_name": "Cadmium",
+        "cas_number": "7440-43-9",
+        "concentration": 0.08,
+        "unit": "pct",
+        "expected_status": "NON_COMPLIANT",
+        "expected_reason_code": "exceeds_threshold"
+      }
+    ]
+  },
+  "doc-13": {
+    "product_name": "Printed Circuit Board Assembly",
+    "manufacturer": "Compucase Ltd",
+    "case": "clearly_non_compliant",
+    "components": [
+      {
+        "component_name": "PCB Flame Retardant Layer",
+        "substance_name": "Decabromodiphenyl ether (DecaBDE)",
+        "cas_number": "1163-19-5",
+        "concentration": 0.6,
+        "unit": "pct",
+        "expected_status": "NON_COMPLIANT",
+        "expected_reason_code": "exceeds_threshold"
+      }
+    ]
+  },
+  "doc-14": {
+    "product_name": "Plastic Food Container",
+    "manufacturer": "HomeGoods Co",
+    "case": "clearly_non_compliant",
+    "components": [
+      {
+        "component_name": "Container Body",
+        "substance_name": "Bisphenol A",
+        "cas_number": "80-05-7",
+        "concentration": 1.5,
+        "unit": "pct",
+        "expected_status": "NON_COMPLIANT",
+        "expected_reason_code": "exceeds_threshold"
+      }
+    ]
+  },
+  "doc-15": {
+    "product_name": "Semiconductor Etching Solution",
+    "manufacturer": "ChipProcess Materials",
+    "case": "clearly_non_compliant",
+    "components": [
+      {
+        "component_name": "Etch Residue Rinse",
+        "substance_name": "Hexafluoropropylene oxide dimer acid (GenX)",
+        "cas_number": "13252-13-6",
+        "concentration": 300,
+        "unit": "ppb",
+        "expected_status": "NON_COMPLIANT",
+        "expected_reason_code": "exceeds_threshold"
+      }
+    ]
+  },
+  "doc-16": {
+    "product_name": "Solder Paste Reel",
+    "manufacturer": "AutoWire GmbH",
+    "case": "borderline",
+    "components": [
+      {
+        "component_name": "Solder Joint",
+        "substance_name": "Lead",
+        "cas_number": "7439-92-1",
+        "concentration": 0.105,
+        "unit": "pct",
+        "expected_status": "NEEDS_REVIEW",
+        "expected_reason_code": "borderline_concentration"
+      }
+    ]
+  },
+  "doc-17": {
+    "product_name": "Anti-Corrosion Primer",
+    "manufacturer": "Acme Coatings Inc",
+    "case": "borderline",
+    "components": [
+      {
+        "component_name": "Primer Base",
+        "substance_name": "Anthracene",
+        "cas_number": "120-12-7",
+        "concentration": 0.098,
+        "unit": "pct",
+        "expected_status": "NEEDS_REVIEW",
+        "expected_reason_code": "borderline_concentration"
+      }
+    ]
+  },
+  "doc-18": {
+    "product_name": "Trace PFAS Surface Treatment",
+    "manufacturer": "Sensatek Inc",
+    "case": "borderline",
+    "components": [
+      {
+        "component_name": "Surface Treatment",
+        "substance_name": "Perfluorooctanoic acid (PFOA)",
+        "cas_number": "335-67-1",
+        "concentration": 24,
+        "unit": "ppb",
+        "expected_status": "NEEDS_REVIEW",
+        "expected_reason_code": "borderline_concentration"
+      }
+    ]
+  },
+  "doc-19": {
+    "product_name": "Recycled Plastic Pellet Batch",
+    "manufacturer": "FloorTech Industries",
+    "case": "borderline",
+    "components": [
+      {
+        "component_name": "Pellet Compound",
+        "substance_name": "Butyl benzyl phthalate (BBP)",
+        "cas_number": "85-68-7",
+        "concentration": 0.107,
+        "unit": "pct",
+        "expected_status": "NEEDS_REVIEW",
+        "expected_reason_code": "borderline_concentration"
+      }
+    ]
+  },
+  "doc-20": {
+    "product_name": "Ceramic Glaze Batch",
+    "manufacturer": "PlayCorp",
+    "case": "borderline",
+    "components": [
+      {
+        "component_name": "Glaze Pigment",
+        "substance_name": "Cadmium",
+        "cas_number": "7440-43-9",
+        "concentration": 0.0105,
+        "unit": "pct",
+        "expected_status": "NEEDS_REVIEW",
+        "expected_reason_code": "borderline_concentration"
+      }
+    ]
+  },
+  "doc-21": {
+    "product_name": "Fabric Softener Concentrate",
+    "manufacturer": "AlpineWear",
+    "case": "borderline",
+    "components": [
+      {
+        "component_name": "Softener Base",
+        "substance_name": "Perfluorohexanesulfonic acid",
+        "cas_number": "355-46-4",
+        "concentration": 26,
+        "unit": "ppb",
+        "expected_status": "NEEDS_REVIEW",
+        "expected_reason_code": "borderline_concentration"
+      }
+    ]
+  },
+  "doc-22": {
+    "product_name": "Proprietary Fluoropolymer Additive",
+    "manufacturer": "ChipProcess Materials",
+    "case": "ambiguous_missing_cas",
+    "components": [
+      {
+        "component_name": "Additive Package",
+        "substance_name": "FluoroMagic XR-9 (proprietary blend)",
+        "cas_number": null,
+        "concentration": 2.0,
+        "unit": "pct",
+        "expected_status": "NEEDS_REVIEW",
+        "expected_reason_code": "not_found_in_graph"
+      }
+    ]
+  },
+  "doc-23": {
+    "product_name": "Generic Metal Finish Coating",
+    "manufacturer": "Acme Coatings Inc",
+    "case": "ambiguous_missing_cas",
+    "components": [
+      {
+        "component_name": "Metal Finish",
+        "substance_name": "Chromate",
+        "cas_number": null,
+        "concentration": 0.3,
+        "unit": "pct",
+        "expected_status": "NEEDS_REVIEW",
+        "expected_reason_code": "ambiguous_name_match"
+      }
+    ]
+  },
+  "doc-24": {
+    "product_name": "Budget Extension Cord",
+    "manufacturer": "Voltera Ltd",
+    "case": "ambiguous_missing_cas",
+    "components": [
+      {
+        "component_name": "Cord Sheathing",
+        "substance_name": "Leed (handwritten, likely Lead)",
+        "cas_number": null,
+        "concentration": 0.2,
+        "unit": "pct",
+        "expected_status": "NEEDS_REVIEW",
+        "expected_reason_code": "ambiguous_name_match"
+      }
+    ]
+  },
+  "doc-25": {
+    "product_name": "REACH-Exempt Polymer Coating",
+    "manufacturer": "FloorTech Industries",
+    "case": "ambiguous_missing_cas",
+    "components": [
+      {
+        "component_name": "Polymer Topcoat",
+        "substance_name": "Next-Gen Non-Fluorinated Repellent Polymer NF-88",
+        "cas_number": null,
+        "concentration": 1.0,
+        "unit": "pct",
+        "expected_status": "NEEDS_REVIEW",
+        "expected_reason_code": "not_found_in_graph"
+      }
+    ]
+  },
+  "doc-26": {
+    "product_name": "Mixed Compliance Multi-Part Assembly",
+    "manufacturer": "Compucase Ltd",
+    "case": "ambiguous_missing_cas",
+    "components": [
+      {
+        "component_name": "Housing",
+        "substance_name": "Lead",
+        "cas_number": "7439-92-1",
+        "concentration": 0.02,
+        "unit": "pct",
+        "expected_status": "COMPLIANT",
+        "expected_reason_code": "within_threshold"
+      },
+      {
+        "component_name": "Coating Layer",
+        "substance_name": "Unidentified Fluorosurfactant Blend",
+        "cas_number": null,
+        "concentration": 0.8,
+        "unit": "pct",
+        "expected_status": "NEEDS_REVIEW",
+        "expected_reason_code": "not_found_in_graph"
+      }
+    ]
+  }
+}

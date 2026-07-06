@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "source": "RoHS Directive 2011/65/EU, Annex II (as amended by Commission Delegated Directive (EU) 2015/863)",
+    "legal_ref": "Directive 2011/65/EU, Article 4(1) and Annex II",
+    "scope": "Restricted in homogeneous materials of electrical and electronic equipment (EEE) placed on the EU market.",
+    "note": "All 10 currently restricted substances -- this is the complete Annex II list, not a subset."
+  },
+  "substances": [
+    {"cas_number": "7439-92-1", "name": "Lead", "threshold_pct": 0.1, "basis": "homogeneous_material"},
+    {"cas_number": "7440-43-9", "name": "Cadmium", "threshold_pct": 0.01, "basis": "homogeneous_material"},
+    {"cas_number": "7439-97-6", "name": "Mercury", "threshold_pct": 0.1, "basis": "homogeneous_material"},
+    {"cas_number": "18540-29-9", "name": "Hexavalent chromium (Cr(VI))", "threshold_pct": 0.1, "basis": "homogeneous_material", "cas_is_representative": true, "representative_note": "RoHS restricts the Cr(VI) oxidation state, not a single compound; CAS shown (chromium(6+)) is the commonly-used representative reference, not the only Cr(VI) species covered."},
+    {"cas_number": "59536-65-1", "name": "Polybrominated biphenyls (PBB)", "threshold_pct": 0.1, "basis": "homogeneous_material", "cas_is_representative": true, "representative_note": "PBB is a class of brominated-biphenyl congeners; CAS shown is a commonly-cited representative (Firemaster BP-6), not the only PBB congener covered."},
+    {"cas_number": "1163-19-5", "name": "Polybrominated diphenyl ethers (PBDE)", "threshold_pct": 0.1, "basis": "homogeneous_material", "cas_is_representative": true, "representative_note": "PBDE is a class of brominated-diphenyl-ether congeners; CAS shown (decaBDE) is a commonly-cited representative, not the only PBDE congener covered."},
+    {"cas_number": "117-81-7", "name": "Bis(2-ethylhexyl) phthalate (DEHP)", "threshold_pct": 0.1, "basis": "homogeneous_material", "added_by": "Directive (EU) 2015/863"},
+    {"cas_number": "85-68-7", "name": "Butyl benzyl phthalate (BBP)", "threshold_pct": 0.1, "basis": "homogeneous_material", "added_by": "Directive (EU) 2015/863"},
+    {"cas_number": "84-74-2", "name": "Dibutyl phthalate (DBP)", "threshold_pct": 0.1, "basis": "homogeneous_material", "added_by": "Directive (EU) 2015/863"},
+    {"cas_number": "84-69-5", "name": "Diisobutyl phthalate (DIBP)", "threshold_pct": 0.1, "basis": "homogeneous_material", "added_by": "Directive (EU) 2015/863"}
+  ]
+}

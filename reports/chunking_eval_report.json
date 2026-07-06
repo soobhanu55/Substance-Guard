@@ -1,0 +1,234 @@
+{
+  "clause_based": {
+    "strategy": "clause_based",
+    "exact_clause_match_at_3": 1.0,
+    "correct_regulation_recall_at_1": 1.0,
+    "n_questions": 12,
+    "rows": [
+      {
+        "question": "What concentration threshold triggers the SVHC notification obligation to ECHA?",
+        "expected_clause": "Article 33",
+        "retrieved_clause_ids": [
+          "Article 7(2)",
+          "Article 33",
+          "Clause 3"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What is a homogeneous material under RoHS?",
+        "expected_clause": "Annex II",
+        "retrieved_clause_ids": [
+          "Annex II",
+          "Article 4",
+          "Annex III"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What is the maximum lead concentration allowed under RoHS?",
+        "expected_clause": "Annex II",
+        "retrieved_clause_ids": [
+          "Annex II",
+          "Annex III",
+          "Article 4"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "When did ECHA's Risk Assessment Committee adopt its opinion on the PFAS restriction?",
+        "expected_clause": "Clause 2",
+        "retrieved_clause_ids": [
+          "Clause 2",
+          "Clause 1",
+          "Clause 5"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What are the three PFAS concentration thresholds being proposed?",
+        "expected_clause": "Clause 3",
+        "retrieved_clause_ids": [
+          "Clause 3",
+          "Clause 4",
+          "Clause 2"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "Does the new PFAS restriction affect surface coatings?",
+        "expected_clause": "Clause 5",
+        "retrieved_clause_ids": [
+          "Clause 5",
+          "Clause 2",
+          "Clause 1"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What substances were added to RoHS Annex II by the 2015 amendment?",
+        "expected_clause": "Annex II",
+        "retrieved_clause_ids": [
+          "Annex II",
+          "Annex III",
+          "Article 4"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What triggers notification of a substance to the ECHA SCIP database?",
+        "expected_clause": "Article 7",
+        "retrieved_clause_ids": [
+          "Article 7(2)",
+          "Article 59",
+          "Article 57"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "How does the PFAS restriction define PFAS structurally?",
+        "expected_clause": "Clause 1",
+        "retrieved_clause_ids": [
+          "Clause 1",
+          "Clause 4",
+          "Clause 2"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What derogation options exist under the draft PFAS restriction?",
+        "expected_clause": "Clause 4",
+        "retrieved_clause_ids": [
+          "Clause 4",
+          "Clause 2",
+          "Clause 5"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What criteria make a substance a Substance of Very High Concern?",
+        "expected_clause": "Article 57",
+        "retrieved_clause_ids": [
+          "Article 57",
+          "Article 59",
+          "Article 7(2)"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What is the RoHS concentration threshold for cadmium?",
+        "expected_clause": "Annex II",
+        "retrieved_clause_ids": [
+          "Annex II",
+          "Annex III",
+          "Article 4"
+        ],
+        "exact_clause_match": true,
+        "top1_regulation_correct": true
+      }
+    ]
+  },
+  "fixed_window": {
+    "strategy": "fixed_window",
+    "exact_clause_match_at_3": 0.0,
+    "correct_regulation_recall_at_1": 1.0,
+    "n_questions": 12,
+    "rows": [
+      {
+        "question": "What concentration threshold triggers the SVHC notification obligation to ECHA?",
+        "expected_clause": "Article 33",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What is a homogeneous material under RoHS?",
+        "expected_clause": "Annex II",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What is the maximum lead concentration allowed under RoHS?",
+        "expected_clause": "Annex II",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "When did ECHA's Risk Assessment Committee adopt its opinion on the PFAS restriction?",
+        "expected_clause": "Clause 2",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What are the three PFAS concentration thresholds being proposed?",
+        "expected_clause": "Clause 3",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "Does the new PFAS restriction affect surface coatings?",
+        "expected_clause": "Clause 5",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What substances were added to RoHS Annex II by the 2015 amendment?",
+        "expected_clause": "Annex II",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What triggers notification of a substance to the ECHA SCIP database?",
+        "expected_clause": "Article 7",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "How does the PFAS restriction define PFAS structurally?",
+        "expected_clause": "Clause 1",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What derogation options exist under the draft PFAS restriction?",
+        "expected_clause": "Clause 4",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What criteria make a substance a Substance of Very High Concern?",
+        "expected_clause": "Article 57",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      },
+      {
+        "question": "What is the RoHS concentration threshold for cadmium?",
+        "expected_clause": "Annex II",
+        "retrieved_clause_ids": [],
+        "exact_clause_match": false,
+        "top1_regulation_correct": true
+      }
+    ]
+  }
+}

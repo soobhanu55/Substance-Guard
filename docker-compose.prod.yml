@@ -1,0 +1,63 @@
+# Production overlay. Use with the base file:
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+#
+# Differences from local dev (docker-compose.yml):
+#   - Neo4j (7474/7687) and Qdrant (6333) are NOT published to the host at all --
+#     they're only reachable from other containers on the compose network. Nothing
+#     public-facing needs direct DB/vector-store access; exposing them on a public VPS
+#     is a real, avoidable attack surface (an unauthenticated Cypher/HTTP endpoint on
+#     the open internet).
+#   - NEO4J_AUTH now comes from .env (NEO4J_PASSWORD) instead of the hardcoded dev
+#     default -- docker-compose.yml's "neo4j/substanceguard" default must not be used
+#     in production.
+#   - restart: unless-stopped on every service, so a VPS reboot brings the stack back.
+#   - Optional Caddy reverse proxy (see the `proxy` service, disabled by default via
+#     the `with-https` profile) for automatic HTTPS once you have a domain -- see
+#     DEPLOY.md. Until then, api/streamlit are published directly and the VPS firewall
+#     (ufw) is the access control, per DEPLOY.md step 4.
+
+services:
+  neo4j:
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:?set NEO4J_PASSWORD in .env}
+    ports: !reset []
+    restart: unless-stopped
+    healthcheck:
+      # overrides the base file's hardcoded dev password -- must match NEO4J_AUTH above
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p ${NEO4J_PASSWORD:?set NEO4J_PASSWORD in .env} 'RETURN 1' || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+
+  qdrant:
+    ports: !reset []
+    restart: unless-stopped
+
+  api:
+    restart: unless-stopped
+
+  streamlit:
+    restart: unless-stopped
+
+  proxy:
+    image: caddy:2.8-alpine
+    profiles: ["with-https"]
+    depends_on:
+      - api
+      - streamlit
+    environment:
+      DOMAIN_APP: ${DOMAIN_APP:?set DOMAIN_APP in .env, e.g. app.example.com}
+      DOMAIN_API: ${DOMAIN_API:?set DOMAIN_API in .env, e.g. api.example.com}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+data/*.sqlite
+data/*.sqlite-*
+data/review_queue.json
+.pytest_cache/
+*.egg-info/
+.streamlit/secrets.toml
+reports/load_*.csv

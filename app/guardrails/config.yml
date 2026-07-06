@@ -1,0 +1,48 @@
+# Deterministic guardrail configuration. Loaded once and cached (see rules.py) -- this
+# is the execution-time gate that runs on EVERY verdict, regardless of what the LLM's
+# narration text says. Mirrors the sibling Text-to-SQL project's philosophy: a compiled
+# rules engine, not an LLM-in-the-loop safety rail, because it must add near-zero
+# latency and must fail closed.
+
+# A COMPLIANT or NON_COMPLIANT verdict missing any of these is rejected and rewritten to
+# NEEDS_REVIEW -- "never state compliant without citing the exact regulation, article/
+# annex, and threshold value."
+required_fields_for_decided_verdict:
+  - regulation_name
+  - threshold_value
+  - threshold_unit
+  - citations
+
+# Phrases that assert a legal conclusion this system must never make (it screens, it
+# does not adjudicate). Case-insensitive substring match against the verdict explanation.
+banned_legal_conclusion_phrases:
+  - "is legal"
+  - "is illegal"
+  - "guaranteed compliant"
+  - "guaranteed to comply"
+  - "definitely compliant"
+  - "definitely legal"
+  - "meets all legal requirements"
+  - "fully compliant with the law"
+  - "this is not a violation"
+
+# Ungrounded-confidence hedge language -- if the LLM narration says this instead of
+# citing evidence, the guardrail blocks the narration and falls back to a templated,
+# citation-only explanation.
+banned_hedge_phrases:
+  - "probably fine"
+  - "probably compliant"
+  - "should be fine"
+  - "should be compliant"
+  - "likely compliant"
+  - "likely fine"
+  - "i assume"
+  - "i'll assume"
+  - "presumably"
+  - "no need to check"
+  - "you can ignore"
+  - "safe to ignore"
+
+# Required framing string (or a close paraphrase check) appended to every report so
+# output is never mistaken for a legal determination.
+required_disclaimer_substring: "screening result for review"

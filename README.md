@@ -51,6 +51,12 @@ FastAPI (`app/main.py`) exposes this over HTTP; Streamlit (`streamlit_app.py`) i
 UI on top of the same API. Neo4j holds the regulatory graph; Qdrant holds the embedded
 regulation text for citation retrieval. `docker compose up` runs all four services.
 
+## Demo
+
+Terminal recording of the real unit test suite (chunkers, guardrails, verdict logic) running end to end, no API needed:
+
+![Terminal recording of the unit test suite](docs/demo.gif)
+
 ## Why this isn't a toy problem
 
 ECHA's PFAS restriction under REACH Annex XVII is, as of this writing, mid-process, not

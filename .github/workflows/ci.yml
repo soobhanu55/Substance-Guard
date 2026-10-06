@@ -1,0 +1,50 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      # chunkers, guardrails and the deterministic verdict logic: no services, no LLM
+      - run: pytest tests/unit -q
+
+  integration:
+    runs-on: ubuntu-latest
+    services:
+      neo4j:
+        image: neo4j:5.26-community
+        env:
+          NEO4J_AUTH: neo4j/substanceguard
+        ports: ["7687:7687"]
+        options: >-
+          --health-cmd "cypher-shell -u neo4j -p substanceguard 'RETURN 1'"
+          --health-interval 10s --health-timeout 10s --health-retries 12 --health-start-period 30s
+      qdrant:
+        image: qdrant/qdrant:v1.12.4
+        ports: ["6333:6333"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Wait for Qdrant and create the (empty) clause collection
+        # On startup the app embeds the regulation corpus with the Gemini embeddings API unless this collection
+        # already exists. CI has no API key, so the collection is created empty and ingestion is skipped.
+        # Consequence: CI covers the API, Neo4j graph and review queue, but NOT RAG ingestion/retrieval.
+        run: |
+          for i in $(seq 1 30); do curl -sf http://localhost:6333/collections >/dev/null && break; sleep 2; done
+          curl -sf -X PUT http://localhost:6333/collections/reg_clauses \
+            -H 'Content-Type: application/json' -d '{"vectors": {"size": 768, "distance": "Cosine"}}'
+      # the slow test calls the real Gemini API and is excluded
+      - run: pytest tests/integration -m "not slow" -q

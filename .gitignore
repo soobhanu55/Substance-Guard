@@ -10,3 +10,7 @@ data/review_queue.json
 *.egg-info/
 .streamlit/secrets.toml
 reports/load_*.csv
+
+.coverage
+htmlcov/
+coverage.xml

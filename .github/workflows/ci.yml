@@ -15,7 +15,8 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       # chunkers, guardrails and the deterministic verdict logic: no services, no LLM
-      - run: pytest tests/unit -q
+      - run: pip install pytest-cov
+      - run: pytest tests/unit -q --cov=app --cov-report=term
 
   integration:
     runs-on: ubuntu-latest

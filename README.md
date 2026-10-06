@@ -1,4 +1,4 @@
-# SubstanceGuard
+# Substance-Guard
 
 An AI agent that screens supplier test reports and safety data sheets (SDS) against
 REACH, RoHS, and the incoming EU PFAS restriction, flags non-compliant substances with
